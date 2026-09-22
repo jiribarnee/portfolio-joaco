@@ -1214,6 +1214,125 @@ span{
 
 }
 
+/* ==========================================
+   AJUSTES GENERALES Y NAVBAR RESPONSIVE
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Evita scroll horizontal indeseado */
+}
+
+.navbar {
+    width: 100%; /* Ajustado de 95% a 100% para evitar desbordes */
+    padding: 0 5%;
+}
+
+/* Subtítulo de Inicio */
+.inicio .subtitulo {
+    color: white;
+    font-size: 32px;
+    margin: 10px 0 25px 0;
+}
+
+/* ==========================================
+   MEDIA QUERIES (TABLETS Y MÓVILES)
+   ========================================== */
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+    .inicio {
+        width: 90%;
+        margin: 120px auto 60px;
+        gap: 40px;
+    }
+
+    .inicio h1 {
+        font-size: 42px;
+    }
+
+    .inicio .subtitulo {
+        font-size: 26px;
+    }
+
+    .perfil {
+        width: 300px;
+    }
+}
+
+/* Dispositivos Medianos / Mobile Horizontal (hasta 850px) */
+@media (max-width: 850px) {
+    /* Navbar ajustado para enlaces en línea reducidos */
+    .navbar {
+        height: auto;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Inicio en columna */
+    .inicio {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 140px;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .perfil {
+        width: 250px;
+    }
+
+    /* Sobre Mí */
+    .sobre-contenido {
+        padding: 30px 20px;
+    }
+
+    .sobre-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Celulares (hasta 600px) */
+@media (max-width: 600px) {
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .inicio .subtitulo {
+        font-size: 20px;
+    }
+
+    .perfil {
+        width: 200px;
+    }
+
+    .contact-title h2,
+    .gastos-header h2,
+    .skills-header h2 {
+        font-size: 32px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        min-height: auto;
+    }
+}
 
 /* =========================
    TABLET
