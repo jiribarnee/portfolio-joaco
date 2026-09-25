@@ -102,18 +102,24 @@ const menuToggle = document.getElementById("menuToggle");
 const menuNav = document.getElementById("menuNav");
 const linksNav = menuNav.querySelectorAll("a");
 
+const iconoMenu = menuToggle.querySelector("i");
+
+// Cambiamos solo la clase del ícono (sin reemplazar el HTML),
+// así el toque sobre el ícono no se pierde
+function actualizarIconoMenu(abierto) {
+    iconoMenu.classList.toggle("fa-bars", !abierto);
+    iconoMenu.classList.toggle("fa-xmark", abierto);
+    menuToggle.setAttribute("aria-expanded", abierto);
+}
+
 function cerrarMenu() {
     menuNav.classList.remove("abierto");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    actualizarIconoMenu(false);
 }
 
 menuToggle.addEventListener("click", () => {
     const abierto = menuNav.classList.toggle("abierto");
-    menuToggle.setAttribute("aria-expanded", abierto);
-    menuToggle.innerHTML = abierto
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+    actualizarIconoMenu(abierto);
 });
 
 // Al tocar un link, se cierra el menú
@@ -121,7 +127,7 @@ linksNav.forEach((link) => link.addEventListener("click", cerrarMenu));
 
 // Al tocar fuera del menú, también se cierra
 document.addEventListener("click", (e) => {
-    if (!e.target.closest(".navbar")) cerrarMenu();
+    if (!e.composedPath().includes(document.querySelector(".navbar"))) cerrarMenu();
 });
 
 
