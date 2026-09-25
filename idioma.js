@@ -60,15 +60,15 @@ const traducciones = {
 
         // Proyecto: Analizador de Gastos
         "proy.etiqueta": "PROJECT 01",
-        "proy.titulo": "Expense Analyzer",
+        "proy.titulo": "Purchase Analyzer by Category",
         "proy.intro": "An application built for <strong>Bailo Hnos.</strong> to analyze and compare expenses from Excel files, showing the information in a fast, clear and organized way.",
         "proy.p1": "A system I developed for <strong>Bailo Hnos.</strong> to make it easier to analyze the company's expenses by uploading Excel files. It lets you compare periods, spot variations and view the information in a simple way.",
         "proy.p2": "The goal of the project is to turn financial data into clearer information to support control and decision-making.",
-        "proy.foto1": "Expense Analyzer - Screenshot 1",
-        "proy.foto2": "Expense Analyzer - Screenshot 2",
-        "proy.foto3": "Expense Analyzer - Screenshot 3",
-        "proy.foto4": "Expense Analyzer - Screenshot 4",
-        "proy.foto5": "Expense Analyzer - Screenshot 5",
+        "proy.foto1": "Purchase Analyzer by Category - Screenshot 1",
+        "proy.foto2": "Purchase Analyzer by Category - Screenshot 2",
+        "proy.foto3": "Purchase Analyzer by Category - Screenshot 3",
+        "proy.foto4": "Purchase Analyzer by Category - Screenshot 4",
+        "proy.foto5": "Purchase Analyzer by Category - Screenshot 5",
         "visor.imagen": "Enlarged image",
         "visor.cerrar": "Close",
 
