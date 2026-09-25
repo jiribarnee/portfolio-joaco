@@ -196,3 +196,17 @@ document.querySelectorAll(".link-email").forEach((link) => {
         mostrarAviso(enIngles ? "Email copied: " + EMAIL : "Email copiado: " + EMAIL);
     });
 });
+
+
+// =========================
+// NAVBAR: EFECTO AL HACER SCROLL
+// =========================
+
+const navbar = document.querySelector(".navbar");
+
+function actualizarNavbar() {
+    navbar.classList.toggle("con-scroll", window.scrollY > 20);
+}
+
+window.addEventListener("scroll", actualizarNavbar, { passive: true });
+actualizarNavbar();

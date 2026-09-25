@@ -6,7 +6,8 @@
 //
 // Para traducir un texto nuevo:
 //   1. En el HTML, agregale al elemento  data-i18n="una.clave"
-//      (o data-i18n-alt / data-i18n-aria para alt y aria-label)
+//      (o data-i18n-alt / data-i18n-aria / data-i18n-href
+//       para alt, aria-label y links)
 //   2. Agregá esa misma clave acá abajo, dentro de "en".
 // =========================================================
 
@@ -28,6 +29,7 @@ const traducciones = {
         "hero.subtitulo": "<strong>Web Developer</strong>",
         "hero.bajada": "Computer Science student",
         "hero.cv": "Download CV",
+        "hero.cvArchivo": "CV-Joaquin_iribarne-English.pdf",
         "hero.foto": "Photo of Joaquin Iribarne",
 
         // Skills
@@ -90,12 +92,14 @@ const originales = {
     titulo: document.title,
     textos: new Map(),
     alts: new Map(),
-    arias: new Map()
+    arias: new Map(),
+    hrefs: new Map()
 };
 
 document.querySelectorAll("[data-i18n]").forEach((el) => originales.textos.set(el, el.innerHTML));
 document.querySelectorAll("[data-i18n-alt]").forEach((el) => originales.alts.set(el, el.alt));
 document.querySelectorAll("[data-i18n-aria]").forEach((el) => originales.arias.set(el, el.getAttribute("aria-label")));
+document.querySelectorAll("[data-i18n-href]").forEach((el) => originales.hrefs.set(el, el.getAttribute("href")));
 
 function aplicarIdioma(idioma) {
     const dic = traducciones[idioma]; // undefined si es español
@@ -110,6 +114,10 @@ function aplicarIdioma(idioma) {
 
     originales.arias.forEach((ariaEs, el) => {
         el.setAttribute("aria-label", dic?.[el.dataset.i18nAria] ?? ariaEs);
+    });
+
+    originales.hrefs.forEach((hrefEs, el) => {
+        el.setAttribute("href", dic?.[el.dataset.i18nHref] ?? hrefEs);
     });
 
     document.title = dic?.["pagina.titulo"] ?? originales.titulo;
