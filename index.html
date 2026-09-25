@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="logo-joaco.png" type="image/png">
     <title>Joaquin Iribarne | Desarrollador Web</title>
-    <meta name="description" content="Portfolio de Joaquin Iribarne, estudiante de Licenciatura en Informática y desarrollador web. Conocé mis proyectos, habilidades y experiencia.">
-    <meta name="keywords" content="Joaquin Iribarne, desarrollador web, programador, portfolio, Java, JavaScript, React, Python">
+    <meta name="description" content="Portfolio de Joaquin Iribarne, desarrollador web y estudiante de Licenciatura en Informática. Conocé mis proyectos y habilidades.">
+    <meta name="keywords" content="Joaquin Iribarne, desarrollador web, programador, portfolio, Java, JavaScript, Python, React, SQL">
     <meta name="author" content="Joaquin Iribarne">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jiribarne.online/">
@@ -26,13 +29,24 @@
         JI<span>.</span>
     </a>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#skills">Skills</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="navbar-derecha">
+
+        <nav id="menuNav">
+            <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
+            <a href="#skills" data-i18n="nav.skills">Skills</a>
+            <a href="#sobre-mi" data-i18n="nav.sobre">Sobre mí</a>
+            <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+            <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+        </nav>
+
+        <!-- BOTÓN DE IDIOMA -->
+        <button class="idioma-toggle" id="idiomaToggle" aria-label="Switch to English">EN</button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" data-i18n-aria="menu.abrir" aria-expanded="false" aria-controls="menuNav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
 
 </header>
 
@@ -40,171 +54,86 @@
 
 <section class="inicio" id="inicio"> 
     <div class="contenido"> 
-        <h1>¡Hola! <br> Soy <span>Joaquin Iribarne</span></h1>
-        <p class="subtitulo"><strong>Desarrollador Full Stack</strong></p> 
-        <a href="CV.pdf" download class="cv">Descargar CV</a> 
+        <h1 data-i18n="hero.titulo">¡Hola! <br> Soy <span>Joaquin Iribarne</span></h1>
+        <p class="subtitulo" data-i18n="hero.subtitulo"><strong>Desarrollador Web</strong></p>
+        <p class="bajada" data-i18n="hero.bajada">Estudiante de Licenciatura en Informática</p> 
+        <a href="CV-Joaquin-Iribarne.pdf" download class="cv" data-i18n="hero.cv">Descargar CV</a> 
         <div class="redes"> 
-            <a href="https://www.linkedin.com/in/joaquin-iribarne/" target="_blank"><i class="fa-brands fa-linkedin"></i></a> 
-            <a href="https://github.com/jiribarnee" target="_blank"><i class="fa-brands fa-github"></i></a> 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=iribarneejoaco@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a> 
+            <a href="https://www.linkedin.com/in/joaquin-iribarne/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a> 
+            <a href="https://github.com/jiribarnee?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a> 
+            <a href="mailto:iribarneejoaco@gmail.com" class="link-email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a> 
         </div> 
     </div> 
-    <img src="joaco.png" alt="Mi foto" class="perfil"> 
+    <img src="joaco.png" alt="Foto de Joaquin Iribarne" data-i18n-alt="hero.foto" class="perfil"> 
 </section>
 
 
 <section class="skills" id="skills">
 
     <div class="skills-header">
-
-        <span>Mis conocimientos</span>
-
+        <span data-i18n="skills.etiqueta">Mis conocimientos</span>
         <h2>Skills</h2>
-
-        <p>
-            Tecnologías y herramientas que estoy aprendiendo
-            y utilizando en mis proyectos.
-        </p>
-
+        <p data-i18n="skills.desc">Tecnologías y herramientas que uso en mis proyectos.</p>
     </div>
-
 
     <div class="skills-container">
 
-        <!-- HTML Y CSS -->
         <div class="skill-card">
-
-            <div class="skill-icons">
-
-                <div class="skill-icon html">
-                    <img 
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                        alt="HTML5"
-                    >
-                </div>
-
-                <div class="skill-icon css">
-                    <img 
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                        alt="CSS3"
-                    >
-                </div>
-
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
             </div>
-
-            <h3>HTML5 Y CSS3</h3>
-
-            <p>
-                Desarrollo de estructuras web semánticas y accesibles
-                con diseño de interfaces modernas, responsive,
-                animaciones y estilos personalizados.
-            </p>
-
+            <h3 data-i18n="skill.html.titulo">HTML y CSS</h3>
+            <p data-i18n="skill.html.desc">Sitios semánticos, accesibles y responsive, con animaciones y estilos propios.</p>
         </div>
 
-
-        <!-- JAVASCRIPT -->
         <div class="skill-card">
-
-            <div class="skill-icon javascript">
-
-                <img 
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript"
-                >
-
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
             </div>
-
-            <h3>JavaScript</h3>
-
-            <p>
-                Desarrollo de funcionalidades interactivas
-                y dinámicas para sitios web.
-            </p>
-
+            <h3 data-i18n="skill.js.titulo">JavaScript</h3>
+            <p data-i18n="skill.js.desc">Interactividad y lógica del lado del cliente para sitios y aplicaciones web.</p>
         </div>
 
-
-        <!-- JAVA -->
         <div class="skill-card">
-
-            <div class="skill-icon java">
-
-                <img 
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    alt="Java"
-                >
-
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
             </div>
-
-            <h3>Java</h3>
-
-            <p>
-                Programación orientada a objetos,
-                estructuras de datos y desarrollo de aplicaciones.
-            </p>
-
+            <h3 data-i18n="skill.react.titulo">React</h3>
+            <p data-i18n="skill.react.desc">Interfaces con componentes reutilizables para las apps que desarrollo.</p>
         </div>
 
-
         <div class="skill-card">
-
-            <div class="skill-icon python">
-            <img 
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"alt="Python">
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
             </div>
-
-            <h3>Python</h3>
-
-                <p>
-                    Desarrollo de aplicaciones y automatización de tareas,
-                    utilizando programación estructurada y orientada a objetos.
-                </p>
+            <h3 data-i18n="skill.java.titulo">Java</h3>
+            <p data-i18n="skill.java.desc">Programación orientada a objetos y estructuras de datos.</p>
         </div>
 
-
-
-        <!-- GIT -->
         <div class="skill-card">
-
-            <div class="skill-icon git">
-
-                <img 
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                    alt="Git"
-                >
-
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
             </div>
-
-            <h3>Git</h3>
-
-            <p>
-                Control de versiones y gestión de proyectos
-                mediante Git y GitHub.
-            </p>
-
+            <h3 data-i18n="skill.python.titulo">Python</h3>
+            <p data-i18n="skill.python.desc">Aplicaciones, procesamiento de datos y automatización de tareas.</p>
         </div>
 
-
-        <!-- GITHUB -->
         <div class="skill-card">
-
-            <div class="skill-icon github">
-
-                <img 
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    alt="GitHub"
-                >
-
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
             </div>
+            <h3 data-i18n="skill.sql.titulo">SQL</h3>
+            <p data-i18n="skill.sql.desc">Diseño de bases de datos y consultas para manejar la información de las apps.</p>
+        </div>
 
-            <h3>GitHub</h3>
-
-            <p>
-                Publicación de proyectos, repositorios
-                y colaboración utilizando GitHub.
-            </p>
-
+        <div class="skill-card">
+            <div class="skill-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            </div>
+            <h3 data-i18n="skill.git.titulo">Git y GitHub</h3>
+            <p data-i18n="skill.git.desc">Control de versiones, repositorios y publicación de proyectos.</p>
         </div>
 
     </div>
@@ -216,33 +145,36 @@
     <div class="sobre-contenido">
 
         <div class="sobre-titulo">
-            <h2>SOBRE MÍ</h2>
+            <h2 data-i18n="sobre.titulo">SOBRE MÍ</h2>
         </div>
 
         <div class="sobre-texto">
 
-            <h3>
+            <h3 data-i18n="sobre.hola">
                 Hola, soy <strong>Joaquin Iribarne</strong>.
             </h3>
 
-            <p>
+            <p data-i18n="sobre.p1">
                 Soy estudiante de <strong>Licenciatura en Informática</strong>
-                y desarrollador web en formación.
+                y trabajo como desarrollador web en <strong>Bailo Hnos.</strong>,
+                donde creo aplicaciones que la empresa usa en su día a día.
             </p>
 
-            <p>
-                Actualmente estoy dando mis primeros pasos en el desarrollo
-                de aplicaciones y páginas web, mientras continúo fortaleciendo
-                mis conocimientos en <span>HTML, CSS, JavaScript y Java.</span>
+            <p data-i18n="sobre.p2">
+                Lo que más me gusta es encontrar un problema real, como un proceso
+                lento o datos difíciles de leer, y convertirlo en una herramienta
+                simple y clara. Trabajo con <span>HTML, CSS, JavaScript, React, SQL, Java y Python</span>,
+                y este año me estoy enfocando en <span>React y SQL</span> para construir apps más completas.
             </p>
 
-            <p>
-                Me interesa crear proyectos modernos, funcionales y
-                atractivos, combinando tecnología y creatividad para
-                transformar ideas en soluciones digitales.
+            <p data-i18n="sobre.p3">
+                Me interesa seguir creciendo como desarrollador, sumarme a proyectos
+                donde pueda aprender de otros y crear soluciones que la gente use de verdad.
             </p>
 
         </div>
+
+    </div>
 
 </section>
 
@@ -253,12 +185,12 @@
 <section class="proyectos" id="proyectos">
 
     <div class="gastos-header">
-        <span>PROYECTO 01</span>
+        <span data-i18n="proy.etiqueta">PROYECTO 01</span>
 
-        <h2>Analizador de Gastos</h2>
+        <h2 data-i18n="proy.titulo">Analizador de Gastos</h2>
 
-        <p>
-            Aplicación desarrollada para analizar y comparar gastos
+        <p data-i18n="proy.intro">
+            Aplicación desarrollada para <strong>Bailo Hnos.</strong> que permite analizar y comparar gastos
             a partir de archivos Excel, permitiendo visualizar
             información de manera rápida, clara y organizada.
         </p>
@@ -282,31 +214,31 @@
     <img 
         src="Imagen proyectos/Foto 1.png"
         class="imagen-gasto activa"
-        alt="Analizador de Gastos - Foto 1"
+        alt="Analizador de Gastos - Foto 1" data-i18n-alt="proy.foto1"
     >
 
     <img 
         src="Imagen proyectos/Foto 2.png"
         class="imagen-gasto"
-        alt="Analizador de Gastos - Foto 2"
+        alt="Analizador de Gastos - Foto 2" data-i18n-alt="proy.foto2"
     >
 
     <img 
         src="Imagen proyectos/Foto 3.png"
         class="imagen-gasto"
-        alt="Analizador de Gastos - Foto 3"
+        alt="Analizador de Gastos - Foto 3" data-i18n-alt="proy.foto3"
     >
 
     <img 
         src="Imagen proyectos/foto 4.png"
         class="imagen-gasto"
-        alt="Analizador de Gastos - Foto 4"
+        alt="Analizador de Gastos - Foto 4" data-i18n-alt="proy.foto4"
     >
 
     <img 
         src="Imagen proyectos/Foto 5.png"
         class="imagen-gasto"
-        alt="Analizador de Gastos - Foto 5"
+        alt="Analizador de Gastos - Foto 5" data-i18n-alt="proy.foto5"
     >
 
 </div>
@@ -326,16 +258,16 @@
 
             <span class="gastos-numero">01</span>
 
-            <h3>Analizador de Gastos</h3>
+            <h3 data-i18n="proy.titulo">Analizador de Gastos</h3>
 
-            <p>
-                Sistema diseñado para facilitar el análisis de gastos
-                de una empresa mediante la carga de archivos Excel.
+            <p data-i18n="proy.p1">
+                Sistema que desarrollé para <strong>Bailo Hnos.</strong>, pensado para facilitar
+                el análisis de gastos de la empresa mediante la carga de archivos Excel.
                 Permite comparar períodos, identificar variaciones
                 y visualizar la información de forma sencilla.
             </p>
 
-            <p>
+            <p data-i18n="proy.p2">
                 El objetivo del proyecto es transformar datos
                 financieros en información más clara para facilitar
                 el control y la toma de decisiones.
@@ -360,7 +292,7 @@
 
                 <a 
                     href="https://github.com/jiribarnee"
-                    target="_blank"
+                    target="_blank" rel="noopener"
                     class="gastos-btn github"
                 >
                     <i class="fa-brands fa-github"></i>
@@ -375,14 +307,14 @@
 
 <div class="visor-imagen" id="visorImagen">
 
-    <button class="cerrar-visor" id="cerrarVisor">
+    <button class="cerrar-visor" id="cerrarVisor" aria-label="Cerrar" data-i18n-aria="visor.cerrar">
         <i class="fa-solid fa-xmark"></i>
     </button>
 
     <img 
         id="imagenGrande"
         src=""
-        alt="Imagen ampliada"
+        alt="Imagen ampliada" data-i18n-alt="visor.imagen"
     >
 
 </div>
@@ -394,11 +326,11 @@
 
     <div class="contact-title">
 
-        <span>¿Hablamos?</span>
+        <span data-i18n="contacto.etiqueta">¿Hablamos?</span>
 
-        <h2>Contacto</h2>
+        <h2 data-i18n="contacto.titulo">Contacto</h2>
 
-        <p>
+        <p data-i18n="contacto.desc">
             Si querés ponerte en contacto conmigo,
             podés encontrarme en cualquiera de estos medios.
         </p>
@@ -412,9 +344,8 @@
         <!-- EMAIL -->
 
         <a 
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=iribarneejoaco@gmail.com"
-    target="_blank"
-    class="contact-card"
+    href="mailto:iribarneejoaco@gmail.com"
+    class="contact-card link-email"
 >
     
     <div class="contact-icon">
@@ -435,7 +366,7 @@
 
         <a
             href="https://www.linkedin.com/in/joaquin-iribarne/"
-            target="_blank"
+            target="_blank" rel="noopener"
             class="contact-card"
         >
 
@@ -460,7 +391,7 @@
 
         <a
             href="https://github.com/jiribarnee"
-            target="_blank"
+            target="_blank" rel="noopener"
             class="contact-card"
         >
 
@@ -487,8 +418,9 @@
 
 <a 
     href="https://wa.me/5492478442926"
-    target="_blank"
+    target="_blank" rel="noopener"
     class="contact-button"
+    data-i18n="contacto.boton"
 >
     Enviarme un mensaje
     <i class="fa-brands fa-whatsapp"></i>
@@ -496,6 +428,10 @@
 
 </section>
 
+<!-- AVISO "EMAIL COPIADO" -->
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
 <script src="script.js"></script>
+<script src="idioma.js"></script>
 </body>
 </html>
