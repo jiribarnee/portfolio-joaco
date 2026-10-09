@@ -1,40 +1,31 @@
 const imagenes = document.querySelectorAll(".imagen-gasto");
 
-const botonAnterior = document.querySelector(".galeria-btn.izquierda");
-const botonSiguiente = document.querySelector(".galeria-btn.derecha");
+// Cada proyecto tiene su propia galería con sus botones
+document.querySelectorAll(".gastos-galeria").forEach((galeria) => {
 
-let imagenActual = 0;
+    const fotos = galeria.querySelectorAll(".imagen-gasto");
+    const anterior = galeria.querySelector(".galeria-btn.izquierda");
+    const siguiente = galeria.querySelector(".galeria-btn.derecha");
+    let actual = 0;
 
-function mostrarImagen(numero) {
+    function mostrar(numero) {
+        fotos.forEach((foto) => foto.classList.remove("activa"));
+        fotos[numero].classList.add("activa");
+    }
 
-    imagenes.forEach((imagen) => {
-        imagen.classList.remove("activa");
+    siguiente.addEventListener("click", () => {
+        actual = (actual + 1) % fotos.length;
+        mostrar(actual);
     });
 
-    imagenes[numero].classList.add("activa");
-}
+    anterior.addEventListener("click", () => {
+        actual = (actual - 1 + fotos.length) % fotos.length;
+        mostrar(actual);
+    });
 
-botonSiguiente.addEventListener("click", () => {
-
-    imagenActual++;
-
-    if (imagenActual >= imagenes.length) {
-        imagenActual = 0;
-    }
-
-    mostrarImagen(imagenActual);
 });
 
-botonAnterior.addEventListener("click", () => {
 
-    imagenActual--;
-
-    if (imagenActual < 0) {
-        imagenActual = imagenes.length - 1;
-    }
-
-    mostrarImagen(imagenActual);
-});
 // =========================
 // VISOR DE IMAGEN
 // =========================

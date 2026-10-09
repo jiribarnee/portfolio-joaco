@@ -58,17 +58,27 @@ const traducciones = {
         "sobre.p2": "What I enjoy most is finding a real problem, like a slow process or hard-to-read data, and turning it into a simple, clear tool. I work with <span>HTML, CSS, JavaScript, React, SQL, Java and Python</span>, and this year I'm focusing on <span>React and SQL</span> to build more complete apps.",
         "sobre.p3": "I want to keep growing as a developer, join projects where I can learn from others and build solutions people actually use.",
 
-        // Proyecto: Analizador de Gastos
-        "proy.etiqueta": "PROJECT 01",
-        "proy.titulo": "Purchase Analyzer by Category",
-        "proy.intro": "An application built for <strong>Bailo Hnos.</strong> to analyze and compare expenses from Excel files, showing the information in a fast, clear and organized way.",
-        "proy.p1": "A system I developed for <strong>Bailo Hnos.</strong> to make it easier to analyze the company's expenses by uploading Excel files. It lets you compare periods, spot variations and view the information in a simple way.",
-        "proy.p2": "The goal of the project is to turn financial data into clearer information to support control and decision-making.",
-        "proy.foto1": "Purchase Analyzer by Category - Screenshot 1",
-        "proy.foto2": "Purchase Analyzer by Category - Screenshot 2",
-        "proy.foto3": "Purchase Analyzer by Category - Screenshot 3",
-        "proy.foto4": "Purchase Analyzer by Category - Screenshot 4",
-        "proy.foto5": "Purchase Analyzer by Category - Screenshot 5",
+        // Proyecto 01: Análisis de Compras por Concepto
+        "proy1.etiqueta": "PROJECT 01",
+        "proy1.titulo": "Purchases Analysis by Category",
+        "proy1.intro": "Desktop application built for <strong>Bailo Hnos.</strong> that compares expenses by category across 2 to 12 periods from Excel files.",
+        "proy1.p1": "A system I developed for <strong>Bailo Hnos.</strong> You upload each month's Excel file and the app calculates the spending change between periods, detects new or discontinued categories and generates automatic alerts for sharp increases and decreases.",
+        "proy1.p2": "It includes interactive charts and a print-ready PDF report, with all months sorted by date and the total spent per category.",
+        "proy1.foto1": "Purchases Analysis by Category - Screenshot 1",
+        "proy1.foto2": "Purchases Analysis by Category - Screenshot 2",
+        "proy1.foto3": "Purchases Analysis by Category - Screenshot 3",
+        "proy1.foto4": "Purchases Analysis by Category - Screenshot 4",
+
+        // Proyecto 02: Análisis de Sumas y Saldos
+        "proy2.etiqueta": "PROJECT 02",
+        "proy2.titulo": "Trial Balance Analysis",
+        "proy2.intro": "Desktop application for <strong>Bailo Hnos.</strong> that analyzes the accounting trial balance and compares expenses and income across several periods.",
+        "proy2.p1": "It reads each month's trial balance file, separates expense accounts (4010) from income accounts (5010), calculates each period's result and flags every change as favorable or unfavorable.",
+        "proy2.p2": "You can choose which two periods to compare, view alerts and expense/income charts, and export a PDF with the accounts grouped and their totals in millions of pesos.",
+        "proy2.foto1": "Trial Balance Analysis - Screenshot 1",
+        "proy2.foto2": "Trial Balance Analysis - Screenshot 2",
+        "proy2.foto3": "Trial Balance Analysis - Screenshot 3",
+        "proy2.foto4": "Trial Balance Analysis - Screenshot 4",
         "visor.imagen": "Enlarged image",
         "visor.cerrar": "Close",
 

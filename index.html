@@ -180,110 +180,182 @@
 
 <section class="proyectos" id="proyectos">
 
-    <div class="gastos-header">
-        <span data-i18n="proy.etiqueta">PROYECTO 01</span>
+    <div class="proyecto-bloque">
 
-        <h2 data-i18n="proy.titulo">Analizador de Compras por Concepto</h2>
+        <div class="gastos-header">
+            <span data-i18n="proy1.etiqueta">PROYECTO 01</span>
 
-        <p data-i18n="proy.intro">
-            Aplicación desarrollada para <strong>Bailo Hnos.</strong> que permite analizar y comparar gastos
-            a partir de archivos Excel, permitiendo visualizar
-            información de manera rápida, clara y organizada.
-        </p>
-    </div>
+            <h2 data-i18n="proy1.titulo">Análisis de Compras por Concepto</h2>
 
-
-    <div class="gastos-proyecto">
-
-
-        <div class="gastos-galeria">
-
-            <button class="galeria-btn izquierda">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-
-        <div class="imagenes-proyecto">
-
-    <img 
-        src="Imagen proyectos/Foto 1.png"
-        class="imagen-gasto activa"
-        alt="Analizador de Compras por Concepto - Foto 1" data-i18n-alt="proy.foto1"
-    >
-
-    <img 
-        src="Imagen proyectos/Foto 2.png"
-        class="imagen-gasto"
-        alt="Analizador de Compras por Concepto - Foto 2" data-i18n-alt="proy.foto2"
-    >
-
-    <img 
-        src="Imagen proyectos/Foto 3.png"
-        class="imagen-gasto"
-        alt="Analizador de Compras por Concepto - Foto 3" data-i18n-alt="proy.foto3"
-    >
-
-    <img 
-        src="Imagen proyectos/foto 4.png"
-        class="imagen-gasto"
-        alt="Analizador de Compras por Concepto - Foto 4" data-i18n-alt="proy.foto4"
-    >
-
-    <img 
-        src="Imagen proyectos/Foto 5.png"
-        class="imagen-gasto"
-        alt="Analizador de Compras por Concepto - Foto 5" data-i18n-alt="proy.foto5"
-    >
-
-</div>
-
-            <button class="galeria-btn derecha">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-
+            <p data-i18n="proy1.intro">
+                Aplicación de escritorio desarrollada para <strong>Bailo Hnos.</strong> que compara los gastos por categoría entre 2 y 12 períodos a partir de archivos Excel.
+            </p>
         </div>
 
+        <div class="gastos-proyecto">
 
-        <div class="gastos-info">
+            <div class="gastos-galeria">
 
-            <span class="gastos-numero">01</span>
+                <button class="galeria-btn izquierda" aria-label="Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-            <h3 data-i18n="proy.titulo">Analizador de Compras por Concepto</h3>
+                <div class="imagenes-proyecto">
 
-            <p data-i18n="proy.p1">
-                Sistema que desarrollé para <strong>Bailo Hnos.</strong>, pensado para facilitar
-                el análisis de gastos de la empresa mediante la carga de archivos Excel.
-                Permite comparar períodos, identificar variaciones
-                y visualizar la información de forma sencilla.
-            </p>
+                <img
+                    src="Imagen proyectos/compras-1.png"
+                    class="imagen-gasto activa"
+                    alt="Análisis de Compras por Concepto - Foto 1" data-i18n-alt="proy1.foto1"
+                >
 
-            <p data-i18n="proy.p2">
-                El objetivo del proyecto es transformar datos
-                financieros en información más clara para facilitar
-                el control y la toma de decisiones.
-            </p>
+                <img
+                    src="Imagen proyectos/compras-2.png"
+                    class="imagen-gasto"
+                    alt="Análisis de Compras por Concepto - Foto 2" data-i18n-alt="proy1.foto2"
+                >
 
+                <img
+                    src="Imagen proyectos/compras-3.png"
+                    class="imagen-gasto"
+                    alt="Análisis de Compras por Concepto - Foto 3" data-i18n-alt="proy1.foto3"
+                >
 
-            <div class="gastos-tecnologias">
+                <img
+                    src="Imagen proyectos/compras-4.png"
+                    class="imagen-gasto"
+                    alt="Análisis de Compras por Concepto - Foto 4" data-i18n-alt="proy1.foto4"
+                >
+                </div>
 
+                <button class="galeria-btn derecha" aria-label="Siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <div class="gastos-info">
+
+                <span class="gastos-numero">01</span>
+
+                <h3 data-i18n="proy1.titulo">Análisis de Compras por Concepto</h3>
+
+                <p data-i18n="proy1.p1">
+                    Sistema que desarrollé para <strong>Bailo Hnos.</strong> Se cargan los Excel de cada mes y la aplicación calcula la variación de gasto entre períodos, detecta categorías nuevas o discontinuadas y genera alertas automáticas de aumentos y disminuciones fuertes.
+                </p>
+
+                <p data-i18n="proy1.p2">
+                    Incluye gráficos interactivos y un reporte en PDF listo para imprimir, con todos los meses ordenados por fecha y el total gastado por categoría.
+                </p>
+
+                <div class="gastos-tecnologias">
                 <span>Python</span>
                 <span>PySide6</span>
                 <span>Pandas</span>
                 <span>Plotly</span>
+                </div>
+
+                <div class="gastos-botones">
+                    <a
+                        href="https://github.com/jiribarnee"
+                        target="_blank" rel="noopener"
+                        class="gastos-btn github"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
 
             </div>
 
+        </div>
 
+    </div>
 
-            <div class="gastos-botones">
+    <div class="proyecto-bloque">
 
-                <a 
-                    href="https://github.com/jiribarnee"
-                    target="_blank" rel="noopener"
-                    class="gastos-btn github"
+        <div class="gastos-header">
+            <span data-i18n="proy2.etiqueta">PROYECTO 02</span>
+
+            <h2 data-i18n="proy2.titulo">Análisis de Sumas y Saldos</h2>
+
+            <p data-i18n="proy2.intro">
+                Aplicación de escritorio para <strong>Bailo Hnos.</strong> que analiza el balance de cuentas contables y compara gastos e ingresos entre varios períodos.
+            </p>
+        </div>
+
+        <div class="gastos-proyecto">
+
+            <div class="gastos-galeria">
+
+                <button class="galeria-btn izquierda" aria-label="Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="imagenes-proyecto">
+
+                <img
+                    src="Imagen proyectos/sumas-1.png"
+                    class="imagen-gasto activa"
+                    alt="Análisis de Sumas y Saldos - Foto 1" data-i18n-alt="proy2.foto1"
                 >
-                    <i class="fa-brands fa-github"></i>
-                    GitHub
-                </a>
+
+                <img
+                    src="Imagen proyectos/sumas-2.png"
+                    class="imagen-gasto"
+                    alt="Análisis de Sumas y Saldos - Foto 2" data-i18n-alt="proy2.foto2"
+                >
+
+                <img
+                    src="Imagen proyectos/sumas-3.png"
+                    class="imagen-gasto"
+                    alt="Análisis de Sumas y Saldos - Foto 3" data-i18n-alt="proy2.foto3"
+                >
+
+                <img
+                    src="Imagen proyectos/sumas-4.png"
+                    class="imagen-gasto"
+                    alt="Análisis de Sumas y Saldos - Foto 4" data-i18n-alt="proy2.foto4"
+                >
+                </div>
+
+                <button class="galeria-btn derecha" aria-label="Siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <div class="gastos-info">
+
+                <span class="gastos-numero">02</span>
+
+                <h3 data-i18n="proy2.titulo">Análisis de Sumas y Saldos</h3>
+
+                <p data-i18n="proy2.p1">
+                    Lee los archivos de sumas y saldos de cada mes, separa las cuentas de gastos (4010) y de ingresos (5010), calcula el resultado de cada período y marca como favorable o desfavorable cada variación.
+                </p>
+
+                <p data-i18n="proy2.p2">
+                    Permite elegir qué dos períodos comparar, ver alertas y gráficos de gastos e ingresos, y exportar un PDF con las cuentas agrupadas y sus totales en millones de pesos.
+                </p>
+
+                <div class="gastos-tecnologias">
+                <span>Python</span>
+                <span>PySide6</span>
+                <span>Pandas</span>
+                <span>Plotly</span>
+                </div>
+
+                <div class="gastos-botones">
+                    <a
+                        href="https://github.com/jiribarnee"
+                        target="_blank" rel="noopener"
+                        class="gastos-btn github"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+
             </div>
 
         </div>

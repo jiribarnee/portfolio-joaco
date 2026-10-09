@@ -1761,3 +1761,15 @@ html {
         transform: scaleX(1);
     }
 }
+
+
+/* Separación entre proyectos */
+.proyecto-bloque + .proyecto-bloque {
+    margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .proyecto-bloque + .proyecto-bloque {
+        margin-top: 80px;
+    }
+}
